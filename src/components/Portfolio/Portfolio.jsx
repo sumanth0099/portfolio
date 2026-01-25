@@ -278,14 +278,15 @@ export default function Portfolio() {
   }
 const ProfileAvatar = () => (
     <div className="pf__avatar-container">
-      <img
-        src="https://api.dicebear.com/9.x/avataaars/svg?seed=Sumanth&backgroundColor=8b5cf6&radius=50"
-        alt={`${PROFILE.name} - Profile Picture`}
-        className="pf__avatar"
-        width={180}
-        height={180}
-        loading="lazy"
-        decoding="async"
-      />
+<img
+  src="/ProfileAvatar.png"
+  alt={`${PROFILE.name} - Profile Picture`}
+  className="pf__avatar"
+  width={180}
+  height={180}
+  loading="lazy"
+  decoding="async"
+/>
+
     </div>
   );
