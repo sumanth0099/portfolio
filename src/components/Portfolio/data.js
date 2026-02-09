@@ -192,6 +192,36 @@ export const PROFILE = {
       downloadLink: "https://drive.google.com/uc?export=download&id=1Q5FCTqyjzDGFkkM-tkZmI2dkujGy2CdR",
     },
     {
+      name: "Operating Systems Basics",
+      issuer: "Cisco",
+      link: "https://drive.google.com/file/d/13aj6n0qKaVDF-eqNzVgshjc4SzypbrsK/view?usp=drive_link",
+      downloadLink: "https://drive.google.com/uc?export=download&id=13aj6n0qKaVDF-eqNzVgshjc4SzypbrsK",
+    },
+    {
+      name: "Problem Solving (Basic)",
+      issuer: "HackerRank",
+      link: "https://drive.google.com/file/d/1SOI0OmLaX16ilCR9nAo1rAYSu9dbaM54/view?usp=drive_link",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1SOI0OmLaX16ilCR9nAo1rAYSu9dbaM54",
+    },
+    {
+      name: "Introduction to the Computer Networking",
+      issuer: "SimpleLearn",
+      link: "https://drive.google.com/file/d/1oWLVx7tex7r2PDt9RJvqdLKxaM0L8z_k/view?usp=drive_link",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1oWLVx7tex7r2PDt9RJvqdLKxaM0L8z_k",
+    },
+    {
+      name: "Learning Docker",
+      issuer: "Linkedin Learning",
+      link: "https://drive.google.com/file/d/1ccxPIVYc5O7op1rt6XCwt-MYZGY4acg2/view?usp=drive_link",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1ccxPIVYc5O7op1rt6XCwt-MYZGY4acg2",
+    },
+    {
+      name: "React Essential Training",
+      issuer: "Linkedin Learning",
+      link: "https://drive.google.com/file/d/1_dC7cUkQrhIomrHdI8paMZPFtnN_mDwu/view?usp=sharing",
+      downloadLink: "https://drive.google.com/uc?export=download&id=1_dC7cUkQrhIomrHdI8paMZPFtnN_mDwu",
+    },
+    {
       name: "SQL Intermediate",
       issuer: "HackerRank",
       link: "https://drive.google.com/file/d/1qEnQ9baVuuDCMsb4dFK6BZjm01T5d4m0/view?usp=sharing",
