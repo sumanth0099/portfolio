@@ -19,7 +19,7 @@ export const PROFILE = {
   export const STATS = [
     { label: "Problems Solved", value: "400+" },
     { label: "Projects Built", value: "11" },
-    { label: "Certifications", value: "7" },
+    { label: "Certifications", value: "11" },
   ];
   
   export const SUMMARY = `Computer Science Engineering student with a strong foundation in programming and full-stack development. 
@@ -220,12 +220,6 @@ export const PROFILE = {
       issuer: "Linkedin Learning",
       link: "https://drive.google.com/file/d/1_dC7cUkQrhIomrHdI8paMZPFtnN_mDwu/view?usp=sharing",
       downloadLink: "https://drive.google.com/uc?export=download&id=1_dC7cUkQrhIomrHdI8paMZPFtnN_mDwu",
-    },
-    {
-      name: "SQL Intermediate",
-      issuer: "HackerRank",
-      link: "https://drive.google.com/file/d/1qEnQ9baVuuDCMsb4dFK6BZjm01T5d4m0/view?usp=sharing",
-      downloadLink: "https://drive.google.com/uc?export=download&id=1qEnQ9baVuuDCMsb4dFK6BZjm01T5d4m0",
     },
     {
       name: "Summer Online Internship",
