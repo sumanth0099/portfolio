@@ -147,7 +147,7 @@ export const PROFILE = {
     {
       name: "LeetCode",
       url: "https://leetcode.com/u/tetalasumanthreddy/",
-      achievement: "Solved 100+ problems",
+      achievement: "Solved 150+ problems",
     },
     {
       name: "GeeksforGeeks",
