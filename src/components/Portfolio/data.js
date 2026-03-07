@@ -17,7 +17,7 @@ export const PROFILE = {
   ];
   
   export const STATS = [
-    { label: "Problems Solved", value: "400+" },
+    { label: "Problems Solved", value: "450+" },
     { label: "Projects Built", value: "11" },
     { label: "Certifications", value: "11" },
   ];
@@ -147,7 +147,7 @@ export const PROFILE = {
     {
       name: "LeetCode",
       url: "https://leetcode.com/u/tetalasumanthreddy/",
-      achievement: "Solved 150+ problems",
+      achievement: "Solved 200+ problems",
     },
     {
       name: "GeeksforGeeks",
