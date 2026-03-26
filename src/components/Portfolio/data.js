@@ -65,6 +65,48 @@ export const PROFILE = {
   
   export const PROJECTS = [
     {
+      title: "Real-Time Collaborative Whiteboard",
+      description: "Multiple users can draw on the same whiteboard simultaneously. Cursors and drawings are synchronized instantly via WebSockets. When new users join, the app automatically loads the last saved state from the database.",
+      github: "https://github.com/sumanth0099/Real-Time-Collaborative-Whiteboard",
+      live: "https://sumanth0099-real-time-collaborative.onrender.com/",
+      tags: ["WebSockets", "Real-time", "Collaboration", "Canvas"],
+    },
+    {
+      title: "Prompt Router",
+      description: "A production-ready AI assistant that automatically classifies user intent and routes each message to a specialised expert persona. Built with Node.js, Express, and Groq Llama models, deployed on Render.",
+      github: "https://github.com/sumanth0099/prompt_Router",
+      live: "https://prompt-router-3r83.onrender.com/",
+      tags: ["AI", "Node.js", "Intent Classification", "LLM"],
+    },
+    {
+      title: "Documentation Site",
+      description: "A high-performance, multi-language documentation platform built with Next.js App Router, ISR, next-intl, FlexSearch, and Docker.",
+      github: "https://github.com/sumanth0099/docs-search",
+      live: "https://docs-search-zeta.vercel.app/",
+      tags: ["Next.js", "Documentation", "Search", "Multi-language"],
+    },
+    {
+      title: "Blog Platform",
+      description: "A static, SEO-friendly blog platform built using Next.js with MDX support and modern web development best practices. Uses Static Site Generation (SSG) for fast load times and improved SEO.",
+      github: "https://github.com/sumanth0099/blogplatform-nextjs-project",
+      live: "https://blogplatform-nextjs-project.vercel.app/",
+      tags: ["Next.js", "MDX", "SEO", "SSG"],
+    },
+    {
+      title: "Productivity Suite Chrome Extension",
+      description: "A production-ready Chrome Extension with features like tab session management, website blocker, persistent notes, custom new tab dashboard, data export, and keyboard shortcuts.",
+      github: "https://github.com/sumanth0099/Production-Ready-Chrome-Extension-Productivity-Suite-with-Manifest-V3",
+      live: "",
+      tags: ["Chrome Extension", "Productivity", "React", "Zustand"],
+    },
+    {
+      title: "Multi-Step Registration Form",
+      description: "A React-based multi-step registration form with validation, localStorage persistence, and smooth step transitions.",
+      github: "https://github.com/sumanth0099/multi-step-form",
+      live: "https://multi-step-form-xi-three.vercel.app/",
+      tags: ["React", "Forms", "Validation", "UX"],
+    },
+    {
       title: "Multi-Tenant SaaS Platform",
       description: "Multi-tenant SaaS project and task management system with organization-level user management, project tracking, role-based access control, and secure tenant data isolation.",
       github: "https://github.com/sumanth0099/Multi-Tenant-SaaS-Platform-with-Project-Task-Management",
