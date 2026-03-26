@@ -104,7 +104,7 @@ export const PROFILE = {
       description: "A React-based multi-step registration form with validation, localStorage persistence, and smooth step transitions.",
       github: "https://github.com/sumanth0099/multi-step-form",
       live: "https://multi-step-form-xi-three.vercel.app/",
-      tags: ["React", "Forms", "Validation", "UX"],
+      tags: ["React", "Forms", "Validation", "UX","Zod"],
     },
     {
       title: "Multi-Tenant SaaS Platform",
