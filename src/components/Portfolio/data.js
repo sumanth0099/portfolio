@@ -289,7 +289,7 @@ export const EXPERIENCE = [
     {
       title: "Self-Taught Full-Stack Developer", 
       company: "Personal Projects",
-      description: "Mastered MERN stack (MongoDB, Express.js, React.js, Node.js) through self-learning and built 11+ production-ready projects including Multi-Tenant SaaS Platform and Data Explorer.",
+      description: "Mastered MERN stack (MongoDB, Express.js, React.js, Node.js) through self-learning and built 11+ production-ready projects",
       duration: "2023 - Present",
       icon: "💻"
     }
