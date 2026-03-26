@@ -18,7 +18,7 @@ export const PROFILE = {
   
   export const STATS = [
     { label: "Problems Solved", value: "450+" },
-    { label: "Projects Built", value: "11" },
+    { label: "Projects Built", value: "17" },
     { label: "Certifications", value: "11" },
   ];
   
@@ -289,7 +289,7 @@ export const EXPERIENCE = [
     {
       title: "Self-Taught Full-Stack Developer", 
       company: "Personal Projects",
-      description: "Mastered MERN stack (MongoDB, Express.js, React.js, Node.js) through self-learning and built 11+ production-ready projects",
+      description: "Mastered MERN stack (MongoDB, Express.js, React.js, Node.js) through self-learning and built 11+ production-ready projects.",
       duration: "2023 - Present",
       icon: "💻"
     }
