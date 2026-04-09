@@ -45,12 +45,12 @@ const ProjectTile = React.memo(({ project }) => (
     </div>
     <div className="pf__actions">
       {project.live && (
-        <a className="pf__link" href={project.live} target="_blank" rel="noreferrer">
+        <a className="pf__link pf__link--live" href={project.live} target="_blank" rel="noreferrer">
           Live <ExternalLink size={16} />
         </a>
       )}
       {project.github && (
-        <a className="pf__link" href={project.github} target="_blank" rel="noreferrer">
+        <a className="pf__link pf__link--github" href={project.github} target="_blank" rel="noreferrer">
           GitHub <Github size={16} />
         </a>
       )}
@@ -63,10 +63,10 @@ const CertificationTile = React.memo(({ cert }) => (
     <h3 className="pf__tileTitle">{cert.name}</h3>
     <p className="pf__muted">{cert.issuer}</p>
     <div className="pf__actions">
-      <a className="pf__link" href={cert.link} target="_blank" rel="noreferrer">
+      <a className="pf__link pf__link--view" href={cert.link} target="_blank" rel="noreferrer">
         View <ExternalLink size={16} />
       </a>
-      <a className="pf__link" href={cert.downloadLink}>
+      <a className="pf__link pf__link--download" href={cert.downloadLink}>
         Download <Download size={16} />
       </a>
     </div>
@@ -105,11 +105,15 @@ const SummarySection = () => (
 const EducationSection = () => (
   <div className="pf__grid">
     {EDUCATION.map((e) => (
-      <article className="pf__tile" key={e.title}>
+      <article className="pf__tile pf__tile--hover pf__tile--edu" key={e.title}>
         <h3 className="pf__tileTitle">{e.title}</h3>
-        <p className="pf__muted">{e.institution}</p>
-        <p className="pf__highlight">{e.gpa} CGPA</p>
-        <p className="pf__muted">{e.duration}</p>
+        <div className="pf__metaRow">
+          <span className="pf__metaPill pf__metaPill--school">{e.institution}</span>
+          <span className="pf__metaPill pf__metaPill--time">{e.duration}</span>
+        </div>
+        <div className="pf__badgeRow">
+          <span className="pf__badge pf__badge--gpa">{e.gpa} CGPA</span>
+        </div>
       </article>
     ))}
   </div>
@@ -118,7 +122,7 @@ const EducationSection = () => (
 const SkillsSection = () => (
   <div className="pf__grid">
     {SKILLS.map((g) => (
-      <article className="pf__tile" key={g.category}>
+      <article className="pf__tile pf__tile--hover pf__tile--skills" key={g.category}>
         <h3 className="pf__tileTitle">{g.category}</h3>
         <div className="pf__pillRow">
           {g.skills.map((sk) => (
@@ -144,7 +148,7 @@ const CodingSection = () => (
       <article className="pf__tile pf__tile--hover" key={c.name}>
         <h3 className="pf__tileTitle">{c.name}</h3>
         <p className="pf__text">{c.achievement}</p>
-        <a className="pf__link" href={c.url} target="_blank" rel="noreferrer">
+        <a className="pf__link pf__link--profile" href={c.url} target="_blank" rel="noreferrer">
           View Profile <ExternalLink size={16} />
         </a>
       </article>
@@ -169,20 +173,25 @@ const SECTION_COMPONENTS = {
   certifications: CertificationsSection,
 };
 
+const EmptySection = () => null;
+
 // ────────────────────────────────────────────────
 // Main Portfolio Component
 // ────────────────────────────────────────────────
 
 export default function Portfolio() {
     const [activeSection, setActiveSection] = useState("summary");
-    const [mouse, setMouse] = useState({ x: 0, y: 0 });
     const rafRef = useRef(null);
+    const rootRef = useRef(null);
   
     useEffect(() => {
       const onMove = (e) => {
         if (rafRef.current) cancelAnimationFrame(rafRef.current);
         rafRef.current = requestAnimationFrame(() => {
-          setMouse({ x: e.clientX, y: e.clientY });
+          const el = rootRef.current;
+          if (!el) return;
+          el.style.setProperty("--mx", String(e.clientX));
+          el.style.setProperty("--my", String(e.clientY));
         });
       };
   
@@ -209,18 +218,28 @@ export default function Portfolio() {
     );
   
     const ActiveIcon = memoizedSections.find(s => s.id === activeSection)?.icon || Sparkles;
-    const ActiveContent = SECTION_COMPONENTS[activeSection] || (() => null);
+    const ActiveContent = SECTION_COMPONENTS[activeSection] || EmptySection;
   
     return (
-      <div className="pf">
-        <div
-          className="pf__cursorGlow"
-          style={{ left: `${mouse.x}px`, top: `${mouse.y}px` }}
-          aria-hidden="true"
-        />
+      <div className="pf" ref={rootRef}>
+        <div className="pf__cursorGlow" aria-hidden="true" />
   
         <header className="pf__hero">
           <div className="pf__heroInner">
+            <div className="pf__heroGraphics" aria-hidden="true">
+              <svg className="pf__heroRings" viewBox="0 0 600 260" fill="none">
+                <defs>
+                  <linearGradient id="pfRing" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stopColor="rgba(34,211,238,0.7)" />
+                    <stop offset="0.5" stopColor="rgba(139,92,246,0.65)" />
+                    <stop offset="1" stopColor="rgba(244,114,182,0.55)" />
+                  </linearGradient>
+                </defs>
+                <circle cx="130" cy="80" r="54" stroke="url(#pfRing)" strokeWidth="2.5" opacity="0.8" />
+                <circle cx="430" cy="140" r="78" stroke="url(#pfRing)" strokeWidth="2.5" opacity="0.6" />
+                <circle cx="300" cy="60" r="110" stroke="url(#pfRing)" strokeWidth="2" opacity="0.25" />
+              </svg>
+            </div>
             {/* ← Profile picture added here */}
             <ProfileAvatar />
   
@@ -231,16 +250,16 @@ export default function Portfolio() {
   
             <div className="pf__ctaRow">
               <a className="pf__btn pf__btn--email" href={`mailto:${PROFILE.email}`}>
-                <Mail size={18} /> Email
+                <Mail size={18} /> <span className="pf__btnText">Email</span>
               </a>
               <a className="pf__btn pf__btn--phone" href={`tel:${PROFILE.phone}`}>
-                <Phone size={18} /> Phone
+                <Phone size={18} /> <span className="pf__btnText">Phone</span>
               </a>
               <a className="pf__btn pf__btn--linkedin" href={PROFILE.linkedin} target="_blank" rel="noreferrer">
-                <Linkedin size={18} /> LinkedIn
+                <Linkedin size={18} /> <span className="pf__btnText">LinkedIn</span>
               </a>
               <a className="pf__btn pf__btn--github" href={PROFILE.github} target="_blank" rel="noreferrer">
-                <Github size={18} /> GitHub
+                <Github size={18} /> <span className="pf__btnText">GitHub</span>
               </a>
             </div>
   
@@ -265,11 +284,14 @@ export default function Portfolio() {
   
           <main className="pf__content">
             <section className="pf__card">
+              <div className="pf__cardGraphics" aria-hidden="true" />
               <h2 className="pf__title">
                 <ActiveIcon size={22} /> {SECTIONS.find((s) => s.id === activeSection)?.label}
               </h2>
   
-              <ActiveContent />
+              <div className="pf__section" key={activeSection}>
+                <ActiveContent />
+              </div>
             </section>
           </main>
         </div>

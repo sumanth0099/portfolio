@@ -22,10 +22,9 @@ export const PROFILE = {
     { label: "Certifications", value: "11" },
   ];
   
-  export const SUMMARY = `Computer Science Engineering student with a strong foundation in programming and full-stack development. 
-  Hands-on experience building projects using React, JavaScript, Node.js, and Express.js. Certified in 
-  RHCSA, Oracle Java Foundations, and Cisco C Essentials, with active problem-solving practice on LeetCode, 
-  CodeChef, and GeeksforGeeks.`;
+  export const SUMMARY = `Computer Science Engineering student with a strong foundation in programming and full-stack development.
+  Hands-on experience building projects using React and Next.js with modern state management (Zustand), plus backend development with Node.js and Express.js.
+  Comfortable working with databases including PostgreSQL and MongoDB. Certified in RHCSA, Oracle Java Foundations, and Cisco C Essentials, with active problem-solving practice on LeetCode, CodeChef, and GeeksforGeeks.`;
   
   export const EDUCATION = [
     {
@@ -55,7 +54,7 @@ export const PROFILE = {
     },
     {
       category: "Web Technologies",
-      skills: ["HTML", "CSS", "JavaScript", "Node.js", "React.js", "Express.js", "SQL", "MongoDB"],
+      skills: ["HTML", "CSS", "JavaScript", "Node.js", "React.js", "Next.js", "Zustand", "Express.js", "PostgreSQL", "SQL", "MongoDB"],
     },
     {
       category: "Operating Systems",
